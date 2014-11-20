@@ -271,4 +271,4 @@ git push
 [3]: http://jekyllrb.com/docs/templates/
 [4]: http://docs.shopify.com/themes/liquid-basics
 [5]: http://jekyllrb.com/docs/variables/
-[6]: https://github.com/suyan/suyan.github.io
+[6]: https://github.com/zmywly8866/zmywly8866.github.io
