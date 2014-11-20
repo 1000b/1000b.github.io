@@ -20,25 +20,24 @@ url: http://zmywly8866.github.io
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
-gavatar: http://yansu-uploads.stor.sinaapp.com/imgs/gavatar.png
+gavatar: http://img.my.csdn.net/uploads/201411/20/1416487512_8950.png
 favicon: http://yansu-uploads.stor.sinaapp.com/imgs/favicon.ico
 
 # google analytics 设置
 ga:
-  id: UA-54767140-1
-  url: yansu.org
+  id: UA-56952211-1
+  url: zmywly8866.github.io
 
 # disqus 设置
 disqus:
-  shortname: suyan-zh
+  shortname: zmywly8866
 
 # 主题设置，自动激活某个标签
 active: 技术
 
 # 首页除了最新文章外显示分类
 cates: 
-  - Python
-  - OpenStack
+  - Android
 
 # 中文本地化
 locals:
