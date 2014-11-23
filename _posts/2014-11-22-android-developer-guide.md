@@ -7,93 +7,97 @@ keywords: Android,Github
 description: Android开发者网址导航，分为官网、资源、开源导航、博客、学习导航、APP、招聘、其它和QQ群，里面资源应有尽有，作为Android开发者不可错过的一个导航。
 ---
 
-## **官网**
-[Android Developer](http://developer.android.com)
+<p>
+<strong>官网</strong>
+<ul>
+<li><a href="http://developer.android.com">Android Developer</a></li>
+<li><a href="http://hukai.me/android-training-course-in-chinese/index.html">Android Training 中文版</a></li>
+<li><a href="http://wikidroid.sinaapp.com/Android中文API">Android API中文版</a></li>
+<li><a href="http://wiki.eoeandroid.com/Android_API_Guides">Android API指南中文版</a></li>
+<li><a href="http://adchs.github.io">Android设计指南中文版</a></li>
+<li><a href="http://design.1sters.com">Material Design中文版</a></li>
+</ul>
+</p>
 
-[Android Training 中文版](http://hukai.me/android-training-course-in-chinese/index.html)
+<p>
+<strong>资源</strong>
+<ul>
+<li><a href="http://stackoverflow.com">StackOverFlow</a></li>
+<li><a href="http://www.androiddevtools.cn">AndroidDevTools</a></li>
+<li><a href="https://github.com">GitHub</a></li>
+<li><a href="http://code.csdn.net">CsdnCode</a></li>
+<li><a href="http://code.taobao.org">TaoCode</a></li>
+<li><a href="http://git.oschina.net">OSChinaCode</a></li>
+</ul>
+</p>
 
-[Android API中文版](http://wikidroid.sinaapp.com/Android中文API)
+<p>
+<strong>开源导航</strong>
+<ul>
+<li><a href="http://www.appance.com/category/android/">appance</a></li>
+<li><a href="http://alamkanak.github.io/android-libraries-and-resources/">Android Libraries and Resources</a></li>
+<li><a href="https://android-arsenal.com">Android Arsenal</a></li>
+<li><a href="https://github.com/cesards/AndroidElementals">Android Elements</a></li>
+<li><a href="http://www.23code.com">23Code</a></li>
+<li><a href="https://github.com/android-cn/android-open-project">Android Open Project</a></li>
+<li><a href="https://github.com/android-cn/android-open-project-analysis">Android Open Project Analysis</a></li>
+</ul>
+</p>
 
-[Android API指南中文版](http://wiki.eoeandroid.com/Android_API_Guides)
+<p>
+<strong>博客</strong>
+<ul>
+<li><a href="https://github.com/android-cn/android-dev-cn">android-dev-cn</a></li>
+<li><a href="https://github.com/android-cn/android-dev-com">android-dev-com</a></li>
+<li><a href="http://www.androidweekly.cn">AndroidNews</a></li>
+<li><a href="http://www.importnew.com">ImportNew</a></li>
+</ul>
+</p>
 
-[Android设计指南中文版](http://adchs.github.io)
+<p>
+<strong>学习导航</strong>
+<ul>
+<li><a href="http://www.imooc.com">慕课网</a></li>
+<li><a href="http://www.jikexueyuan.com">极客学院</a></li>
+<li><a href="http://study.163.com">网易云课堂</a></li>
+<li><a href="http://www.maiziedu.com">麦子学院</a></li>
+<li><a href="http://edu.51cto.com">51CTO学院</a></li>
+<li><a href="http://17xueit.com">一起学IT</a></li>
+<li><a href="http://www.nowcoder.com">牛客网</a></li>
+<li><a href="http://stormzhang.com/android/2020/07/07/learn-android-from-rookie/">Android学习之路</a></li>
+</ul>
+</p>
 
-[Material Design中文版](http://design.1sters.com)  
+<p>
+<strong>APP</strong>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=com.inappsquared.devappsdirect&amp;hl=zh_CN">DevAppsDirect</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.desarrollodroide.repos&amp;hl=zh_CN">Libraries for developers</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.ttcode.appdirect">23Code</a></li>
+</ul>
+</p>
 
-## **资源**
-[StackOverFlow](http://stackoverflow.com)
+<p>
+<strong>招聘</strong>
+<ul>
+<li><a href="http://www.lagou.com">拉勾网</a></li>
+<li><a href="http://www.neitui.me">内推</a></li>
+<li><a href="https://100offer.com">100offer</a></li>
+<li><a href="https://github.com/android-cn/android-jobs">Android jobs</a></li>
+</ul>
+</p>
 
-[AndroidDevTools](http://www.androiddevtools.cn)
+<p>
+<strong>其它</strong>
+<ul>
+<li><a href="http://www.appbrain.com">AppBrain</a></li>
+<li><a href="https://f-droid.org">F-Droid</a></li>
+</ul>
+</p>
 
-[GitHub](https://github.com)
-
-[CsdnCode](http://code.csdn.net)
-
-[TaoCode](http://code.taobao.org)
-
-[OSChinaCode](http://git.oschina.net)  
-
-## **开源导航**
-[appance](http://www.appance.com/category/android/)
-
-[Android Libraries and Resources](http://alamkanak.github.io/android-libraries-and-resources/)
-
-[Android Arsenal](https://android-arsenal.com)
-
-[Android Elements](https://github.com/cesards/AndroidElementals)
-
-[23Code](http://www.23code.com)
-
-[Android Open Project](https://github.com/android-cn/android-open-project)
-
-[Android Open Project Analysis](https://github.com/android-cn/android-open-project-analysis)  
-
-## **博客**
-[android-dev-cn](https://github.com/android-cn/android-dev-cn)
-
-[android-dev-com](https://github.com/android-cn/android-dev-com)
-
-[AndroidNews](http://www.androidweekly.cn)
-
-[ImportNew](http://www.importnew.com)  
-
-## **学习导航**
-[慕课网](http://www.imooc.com)
-
-[极客学院](http://www.jikexueyuan.com)
-
-[网易云课堂](http://study.163.com)
-
-[麦子学院](http://www.maiziedu.com)
-
-[51CTO学院](http://edu.51cto.com)
-
-[一起学IT](http://17xueit.com)
-
-[牛客网](http://www.nowcoder.com)
-
-[Android学习之路](http://stormzhang.com/android/2020/07/07/learn-android-from-rookie/)  
-
-## **APP**
-[DevAppsDirect](https://play.google.com/store/apps/details?id=com.inappsquared.devappsdirect&hl=zh_CN)
-
-[Libraries for developers](https://play.google.com/store/apps/details?id=com.desarrollodroide.repos&hl=zh_CN)
-
-[23Code](https://play.google.com/store/apps/details?id=com.ttcode.appdirect)  
-
-## **招聘**
-[拉勾网](http://www.lagou.com)
-
-[内推](http://www.neitui.me)
-
-[100offer](https://100offer.com)
-
-[Android jobs](https://github.com/android-cn/android-jobs)  
-
-## **其它**
-[AppBrain](http://www.appbrain.com)
-
-[F-Droid](https://f-droid.org)  
-
-## **QQ群**
-243182658
+<p>
+<strong>QQ群</strong>
+<ul>
+<li>243182658</lili>
+</ul>
+</p>
