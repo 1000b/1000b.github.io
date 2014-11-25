@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Android开发者网址导航
-category: 工具
+category: Android
 tags: Android
 keywords: Android,Github
 description: Android开发者网址导航，分为官网、资源、开源导航、博客、学习导航、APP、招聘、其它和QQ群，里面资源应有尽有，作为Android开发者不可错过的一个导航。
