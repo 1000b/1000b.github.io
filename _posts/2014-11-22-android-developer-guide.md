@@ -51,6 +51,7 @@ description: Android开发者网址导航，分为官网、资源、开源导航
 <li><a href="https://github.com/android-cn/android-dev-com">android-dev-com</a></li>
 <li><a href="http://www.androidweekly.cn">AndroidNews</a></li>
 <li><a href="http://www.importnew.com">ImportNew</a></li>
+<li><a href="http://droidyue.com">droidyue</a></li>
 </ul>
 </p>
 
