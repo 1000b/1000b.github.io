@@ -12,7 +12,8 @@ description: Android模拟键盘输入功能的实现
 ![效果图](http://img.blog.csdn.net/20141112095050343?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZWtldXk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)　　
 
 　　实现起来很简单，开一个线程，通过sleep控制输入字符的间隔时间，封装一个模拟键盘输入的方法，最终代码是这样子的：
-```
+
+
 
 	public class TypeInActivity extends Activity {
 		@Override
@@ -70,6 +71,5 @@ description: Android模拟键盘输入功能的实现
 		}
 	}
 
-```
 
 　　再找一个模拟打字的音效，在模拟输入的时候播放打字音效，效果还是可以的。。。
