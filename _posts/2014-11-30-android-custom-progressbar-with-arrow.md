@@ -9,8 +9,11 @@ description: Android实现带箭头的自定义Progressbar
 
 ### 引言
 Android原生的进度条可以根据不同的主题有不同的视觉效果，但任何一种主题下的进度条和应用程序的视觉配合起来都显得格格不入，所以多数时候我们需要自定义Progressbar，最简单的是在布局文件中通过“android:progressDrawable”为Progressbar换背景和进度图片，换图后的效果类似于这样：  
+
 ![Progressbar](http://img.blog.csdn.net/20140912124731250?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZWtldXk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-但你会发现，进度图片像是被截断了一样，看上去同样不美观，所以现在很多应用都会在进度条上玩花样，做出各种各样的效果，本例介绍的是在进度条的头部加上光晕箭头的效果，最终效果类似于这样，知道如何做这个效果和，其它效果（一个动画带着进度条跑、火箭进度条等）自然而然也就会了：  
+
+但你会发现，进度图片像是被截断了一样，看上去同样不美观，所以现在很多应用都会在进度条上玩花样，做出各种各样的效果，本例介绍的是在进度条的头部加上光晕箭头的效果，最终效果类似于这样，知道如何做这个效果和，其它效果（一个动画带着进度条跑、火箭进度条等）自然而然也就会了： 
+ 
 ![CustomProgressbar](http://img.blog.csdn.net/20140912124742375?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZWtldXk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 ### 实现原理
