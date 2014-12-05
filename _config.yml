@@ -1,5 +1,5 @@
 permalink: /:year/:month/:day/:title.html
-paginate: 10
+paginate: 50
 markdown: kramdown
 
 kramdown:
