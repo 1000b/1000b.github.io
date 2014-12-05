@@ -34,6 +34,7 @@ description: Android开发者网址导航，分为官网、资源、开源导航
 <p>
 <strong>开源导航</strong>
 <ul>
+<li><a href="https://android.googlesource.com/">AndroidSource</a></li>
 <li><a href="http://www.appance.com/category/android/">appance</a></li>
 <li><a href="http://alamkanak.github.io/android-libraries-and-resources/">Android Libraries and Resources</a></li>
 <li><a href="https://android-arsenal.com">Android Arsenal</a></li>
