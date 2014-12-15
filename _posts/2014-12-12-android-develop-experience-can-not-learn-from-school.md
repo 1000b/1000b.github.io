@@ -26,6 +26,13 @@ description: Android开发经验谈-很少有人会告诉你的Android开发基�
 
 - **维护和运营：**通过测试程序达到稳定标准后，软件就可以上线了，软件上线后，需要去维护，用户反馈的问题要及时解决、用户有疑问要及时解答；根据后台统计信息、抓住可运营的节日、民族文化需要做运营来提高用户使用产品的粘度，让更多的用户知道、使用产品都是运营应该做的。
 
+**注：**
+
+- 可以查看这个答案了解一个APP从创意到上线的具体流程，[开发一个APP有多难？](http://www.zhihu.com/question/27069588)
+
+- 可以查看笔戈科技的这篇文章了解一个手机（平板或其它电子产品也差不多）的诞生需要哪些环节，[一个手机的诞生过程](http://www.bigertech.com/the-born-of-a-phone/)
+
+
 ## 提问的智慧
 &emsp;&emsp;大多数工作都是以结果为导向的，特别是软件开发这个职业，绩效考核、KPI这些都是在考核你工作的成果，所以工作更多地是需要你解决问题的能力，至于学习这个事情，还是在工作之外的时间去做吧。对于提高解决问题能力我有两个建议：
 
@@ -479,7 +486,7 @@ description: Android开发经验谈-很少有人会告诉你的Android开发基�
 
 - 对于需要横竖屏转换的应用，又不想在横竖屏切换的时候重新跑onCreate方法，可以在AndroidManifest.xml文件中对应的Activity标签下调用“android:configChanges="screenSize|orientation"”；
 
-- 为了减轻应用程序主进程的内存压力，对于耗内存比较多的界面（比如视频播放界面、flash播放界面等），可以在AndroidManifest.xml文件中对应的Activity标签下调用“android:process=".processname"”单开一个进程，但在退出这个界面的时候一定要在该界面的onDestory方法中调用System的killProcess方法来杀掉该进程；
+- 为了减轻应用程序主进程的内存压力，对于耗内存比较多的界面（比如视频播放界面、flash播放界面等），可以在AndroidManifest.xml文件中对应的Activity标签下调用“android:process=".processname"”单开一个进程，但在退出这个界面的时候一定要在该界面的onDestory方法中调用System的kill方法来杀掉该进程；
 
 - 在res/values/arrays.xml文件中定义的单个数组的元素个数不宜过大，过大会导致加载数据时非常慢，有时候你需要使用数组资源时数据有可能还没加载完成；
 
@@ -491,6 +498,76 @@ description: Android开发经验谈-很少有人会告诉你的Android开发基�
 		<item name="android:splitMotionEvents">false</item>
 
 - 很多游戏进入时，播放的片头动画多数是一个视频文件；
+
+- Android单个dex文件的方法数不能超过65536个，[android使用多个dex能否避开65536方法数限制?](http://www.zhihu.com/question/24646415)
+
+- 使用模拟器[genymotion](http://www.genymotion.net/)代替android自带模拟器（它需要虚拟机vituralbox的支持，不过官网已经提供了一个集成虚拟机的安装包了，直接下载下来安装即可），可以大大提高使用模拟器的体验（流畅、快），它也可以以插件的形式集成在Eclipse中，[这是视频教程](http://www.imooc.com/learn/241)
+
+- 给Application或者activity设置自定义主题时，最好不要设置为全透明，否则在activity按Home键回退到桌面的时候效果很渣；
+
+- 如果你需要取消toast显示的功能，在一个类中你只需要实例化该类一次（也就是说将Toast定义成一个全局的成员变量），这样你就可以调用mToast.cancel()了，我把它写成了一个静态类：
+
+		public class ToastUtils {
+			private ToastUtils( ){
+				
+			}
+			
+			public static void showToast( Context context, String toast ){
+				if( null == mToast ){
+					mToast = Toast.makeText( context, toast, Toast.LENGTH_LONG );
+				}else{
+					mToast.setText( toast );
+				}
+				
+				mToast.show( );
+			}
+			
+			public static void cancel( ){
+				if( null != mToast ){
+					mToast.cancel( );
+				}
+			}
+			
+			public static Toast mToast = null;
+		}
+
+- 你可以定义一个静态类来实现防止按钮被重复点击导致重复执行一段代码的问题：
+
+		/**
+		 * 按钮重复点击
+		 * 
+		 * */
+		public class BtnClickUtils {
+			private BtnClickUtils( ){
+
+			}			
+
+		    public static boolean isFastDoubleClick() {
+		        long time = System.currentTimeMillis();
+		        long timeD = time - mLastClickTime;
+		        if ( 0 < timeD && timeD < 1000) {   
+		            return true;   
+		        }
+		        
+		        mLastClickTime = time;
+		        
+		        return false;   
+		    }
+		    
+		    private static long mLastClickTime = 0;
+		}
+
+- 放在apk的assets或者raw目录下的数据文件最好做加密处理，在需要使用的时候才解密，这样可以避免在apk被他人破解时数据也被破解的问题；
+
+- 最好不要再activity的onCreate方法里面调用popupwindow的show方法，有可能由于activity没有完全初始化导致程序异常（**android.view.WindowManager$BadTokenException: Unable to add window -- token null is not valid**），如果非要在一进activity就显示popupwindow，建议用handler.post、View.postDelay来处理；
+
+- 对于自定义View，在构造方法里面是获取不到视图的宽高的（此时获取长宽都为0），需要在onMeasure方法中或者跑了onMeasure方法后才能够获取到视图的宽高，不过你可以通过在构造方法里面强制测量视图的宽高来实现在构造方法里获取视图的宽高信息，具体见[MeasureSpec介绍及使用详解](http://www.cnblogs.com/slider/archive/2011/11/28/2266538.html)
+
+- 如果你觉得在安装Eclipse后还需要配置android开发环境很麻烦，你可以直接使用ADT Bundle，它是一个懒人套餐，下载下来就可以用了，可以在[这里](http://www.androiddevtools.cn/)下载。
+
+- 有时间看看[阿里技术嘉年华](http://adc.alibabatech.org/)、[InfoQ演讲与访谈](http://www.infoq.com/cn/presentations)、[Google IO视频](https://www.youtube.com/user/androiddevelopers)，可以学习到一些解决问题、做大项目的经验。
+
+- 当应用中动画比较多，并且动画都是通过图片来切换的时候，可以考虑借用Cocos的[精灵表单](http://blog.csdn.net/wen294299195/article/details/7906638)思想，这样就可以避免图片命名的烦恼。
 
 ## 工具推荐
 
