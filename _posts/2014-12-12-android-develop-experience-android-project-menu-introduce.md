@@ -3,7 +3,7 @@ layout: post
 title: Android开发经验谈-Android工程目录介绍
 category: Android
 tags: Android
-keywords: Android开发经验，工程目录
+keywords: Android开发经验，工程目录, 源码，Resources， assets
 description: Android开发经验谈-Android工程目录介绍
 ---
 
@@ -466,6 +466,7 @@ description: Android开发经验谈-Android工程目录介绍
 &emsp;&emsp;**1. 微盘**
 
 &emsp;&emsp;微盘的架构比较简单，我把最基本，最主干的画了出来：
+
 ![微盘](http://img.my.csdn.net/uploads/201412/15/1418648070_4411.png)
 
 &emsp;&emsp;第一层：com.sina.VDisk：com.sina(公司域名)+app(应用程序名称) 。
