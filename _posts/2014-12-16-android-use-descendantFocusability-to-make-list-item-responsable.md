@@ -27,4 +27,4 @@ description: android:descendantFocusability属性在ListView中的妙用
 
 **参考资料：**
 
-[android:descendantFocusability用法简析](http://www.cnblogs.com/eyu8874521/archive/2012/10/17/2727882.html)
+- [android:descendantFocusability用法简析](http://www.cnblogs.com/eyu8874521/archive/2012/10/17/2727882.html)
