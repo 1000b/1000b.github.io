@@ -16,4 +16,5 @@ description: 去掉SrollView、GrdiView、ListView、ViewPager等滑动到边缘
 	setOverScrollMode( View.OVER_SCROLL_NEVER );
 
 **参考资料：**
+
 - [Android中如何消除ScrollView滚动到顶部或底部时的边框？](http://www.dewen.io/q/4527/Android%E4%B8%AD%E5%A6%82%E4%BD%95%E6%B6%88%E9%99%A4ScrollView%E6%BB%9A%E5%8A%A8%E5%88%B0%E9%A1%B6%E9%83%A8%E6%88%96%E5%BA%95%E9%83%A8%E6%97%B6%E7%9A%84%E8%BE%B9%E6%A1%86%EF%BC%9F)
