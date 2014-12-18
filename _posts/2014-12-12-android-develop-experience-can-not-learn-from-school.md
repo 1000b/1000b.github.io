@@ -365,6 +365,8 @@ description: Android开发经验谈-很少有人会告诉你的Android开发基�
 
 - [Material Design中文版](http://design.1sters.com)
 
+- [Android Developers](https://www.youtube.com/user/androiddevelopers/videos)
+
 
 **资源**
 
@@ -398,6 +400,8 @@ description: Android开发经验谈-很少有人会告诉你的Android开发基�
 
 - [Android Open Project Analysis](https://github.com/android-cn/android-open-project-analysis")
 
+- [awesome-android](https://github.com/snowdream/awesome-android)
+
 **博客**
 
 - [android-dev-cn](https://github.com/android-cn/android-dev-cn")
@@ -411,6 +415,8 @@ description: Android开发经验谈-很少有人会告诉你的Android开发基�
 - [droidyue](http://droidyue.com")
 
 - [脉脉不得语的技术博客](http://www.inferjay.com/)
+
+- [Android Cool Posts](http://greenrobot.me/)
 
 
 **学习导航**
@@ -431,6 +437,10 @@ description: Android开发经验谈-很少有人会告诉你的Android开发基�
 
 - [Android学习之路](http://stormzhang.com/android/2020/07/07/learn-android-from-rookie/")
 
+- [如何自学android编程？](http://www.zhihu.com/question/26417244)
+
+- [What are the best sites to learn about developing Android apps?](https://www.quora.com/What-are-the-best-sites-to-learn-about-developing-Android-apps)
+
 **APP**
 
 - [DevAppsDirect](https://play.google.com/store/apps/details?id=com.inappsquared.devappsdirect&amp;hl=zh_CN")
@@ -438,6 +448,8 @@ description: Android开发经验谈-很少有人会告诉你的Android开发基�
 - [Libraries for developers](https://play.google.com/store/apps/details?id=com.desarrollodroide.repos&amp;hl=zh_CN")
 
 - [23Code](https://play.google.com/store/apps/details?id=com.ttcode.appdirect")
+
+- [Android开源项目汇总](http://www.wandoujia.com/apps/com.cjg.android)
 
 **招聘**
 
@@ -454,6 +466,12 @@ description: Android开发经验谈-很少有人会告诉你的Android开发基�
 - [AppBrain](http://www.appbrain.com")
 
 - [F-Droid](https://f-droid.org")
+
+- [Android开发周报](http://www.inferjay.com/blog/categories/androiddevweekly/)、[Android开发周报（InfoQ）](http://www.infoq.com/cn/search.action?queryString=Android%E5%BC%80%E5%8F%91%E5%91%A8%E6%8A%A5&page=1&searchOrder=&sst=Zp46A54E1sGU2B4f)
+
+- [Android Weekly](http://androidweekly.net/)
+
+- [NewCircle Training](https://www.youtube.com/user/MarakanaTechTV)
 
 **QQ群**
 
