@@ -13,7 +13,7 @@ description: Eclipse下Android项目不能生成R.java的解决方法汇总
 
 2. 正在使用的android sdk中Android SDK Tool、Android SDK Platform Tool或Android SDK Build Tool不是最新（android在ADT 22中的Android SDK 构建工具增加了编译机制）；
 
-&emsp;&emsp;多数情况是由于第1种情况导致，但我今天遇到了第二种情况，还好有StackOverflow，问题速度解决了。
+&emsp;&emsp;多数情况是由于第1种情况导致，但我今天遇到了第二种情况（更新了ADT），还好有StackOverflow，问题速度解决了。
 
 &emsp;&emsp;对于这个问题，有如下几个解决方案：
 
