@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Android程序和数据分离的实现方案
 category: Android
