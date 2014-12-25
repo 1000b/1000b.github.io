@@ -70,6 +70,8 @@ description: Android开发经验谈-Eclipse使用技巧
 
 	代码格式化：选中要格式化的代码，按CTRL+SHIFT+F；
 
+	将代码块提取为方法：ALT + SHIFT + M；
+
 	更多实用功能，直接按：ALT+SHIFT+S；
 
 	[Eclipse 常用快捷键 (动画讲解)](http://www.cnblogs.com/TankXiao/p/4018219.html)
