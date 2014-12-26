@@ -40,9 +40,11 @@ description: 在Android library中不能使用switch-case语句访问资源ID的
 > In a regular Android project, constants in the resource R class are declared like this:
 > 
 > 	public static final int main=0x7f030004;
+> 	
 > However, as of ADT 14, in a library project, they will be declared like this:
 > 	
 > 	public static int main=0x7f030004;
+> 	
 > In other words, the constants are not final in a library project. Therefore your code would no longer compile.
 > 	
 > The solution for this is simple: Convert the switch statement into an if-else statement.
