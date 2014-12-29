@@ -9,13 +9,13 @@ description: Android手写优化-平滑的签名效果实现
 
 ## 前言
 
-&emsp;&emsp这是一篇翻译至[http://corner.squareup.com/](http://corner.squareup.com/2010/07/smooth-signatures.html)的文章，这是[原文](http://corner.squareup.com/2010/07/smooth-signatures.html)，之前有人在TIEYE上翻译过这篇文章，但现在链接已经失效，手写效率问题是一直是Android平台上一个比较棘手的问题，所以有必要将这篇文章带给Android开发者，这篇文章在ITEYE那篇译文的基础上有所改动，如果英语还可以，请尽量阅读原文。
+&emsp;&emsp;这是一篇翻译至[http://corner.squareup.com/](http://corner.squareup.com/2010/07/smooth-signatures.html)的文章，这是[原文](http://corner.squareup.com/2010/07/smooth-signatures.html)，之前有人在TIEYE上翻译过这篇文章，但现在链接已经失效，手写效率问题是一直是Android平台上一个比较棘手的问题，所以有必要将这篇文章带给Android开发者，这篇文章在ITEYE那篇译文的基础上有所改动，如果英语还可以，请尽量阅读原文。
 
 ## 正文
 
 &emsp;&emsp;在信用卡支付流程中，使用手写签名能够提高支付的安全性，并有效降低过程成本。使用Square在手机上进行支付，用户可以用手指在屏幕上签名，无需拿出笔来在收据上签字。
 
-[after](http://img.my.csdn.net/uploads/201412/29/1419827547_3486.png)
+![after](http://img.my.csdn.net/uploads/201412/29/1419827547_3486.png)
 
 &emsp;&emsp;**提示：**该界面中提供了手机摇一摇清屏的功能
 
@@ -67,7 +67,7 @@ description: Android手写优化-平滑的签名效果实现
 
 &emsp;&emsp;可以看到实现出来的效果还是与预期有一定差距的，签名的笔画有锯齿，并且明显反应迟钝，笔迹跟不上手指。
 
-[before](http://img.my.csdn.net/uploads/201412/29/1419827546_1843.png)
+![before](http://img.my.csdn.net/uploads/201412/29/1419827546_1843.png)
 
 &emsp;&emsp;下面我们尝试从两个不同的途径来解决上面的问题。
 
@@ -142,7 +142,7 @@ description: Android手写优化-平滑的签名效果实现
 
 &emsp;&emsp;最终的效果出炉：
 
-[after](http://img.my.csdn.net/uploads/201412/29/1419827547_3486.png)
+![after](http://img.my.csdn.net/uploads/201412/29/1419827547_3486.png)
 
 下面是SignatureView的最终完成代码，我们去掉了一些无关的方法（如摇动检测）
 
