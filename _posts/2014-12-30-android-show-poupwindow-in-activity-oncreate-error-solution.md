@@ -3,7 +3,7 @@ layout: post
 title: 在Activity的onCreate方法中显示PopupWindow导致异常的原因分析及解决方案
 category: Android
 tags: Android
-keywords: Android，token is null,popupwindow
+keywords: Android，token is null,popupwindow,onCreate
 description: 在Activity的onCreate方法中显示PopupWindow导致异常的原因分析及解决方案
 ---
 
