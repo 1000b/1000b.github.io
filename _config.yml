@@ -28,6 +28,10 @@ ga:
   id: UA-56952211-1
   url: zmywly8866.github.io
 
+# 百度统计
+analytics :
+  provider : custom
+
 # disqus 设置
 disqus:
   shortname: zmywly8866
