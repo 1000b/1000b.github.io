@@ -1,100 +1,160 @@
 ---
 layout: post
-title: 【高效工作】Windows系统下的奇技淫巧大汇总
-category: Windows
-tags: Windows
-keywords: Windows
-description: 【高效工作】Windows系统下的奇技淫巧大汇总
+title: Android中include标签的使用及注意事项
+category: android
+tags: android
+keywords: android,include
+description: Android中include标签的使用及注意事项
 ---
 
-&emsp;&emsp;不管你是Linux粉、IOS粉还是软粉，都不应该在不熟悉一个操作系统的情况下贬低它，这三种主流系统能够并存，说明都有各自的优势，作为一个软粉，结合最近在知乎和Quora上看到关于Windows系统中一些鲜为人知的技巧（连接先文末），特地汇总一下以飨读者。
+## 前言
+&emsp;&emsp;<include>标签可以实现在一个layout中引用另一个layout的布局，这通常适合于界面布局复杂、不同界面有共用布局的APP中，比如一个APP的顶部布局、侧边栏布局、底部Tab栏布局、ListView和GridView每一项的布局等，将这些同一个APP中有多个界面用到的布局抽取出来再通过<include>标签引用，既可以降低layout的复杂度，又可以做到布局重用（布局有改动时只需要修改一个地方就可以了）。
 
-## 常用的快捷键：
+## 使用方法
+&emsp;&emsp;<include>标签的使用很简单，只需要在布局文件中需要引用其它布局的地方，使用**layout="@layout/child_layout"**就可以了：
 
-- WIN+D：显示桌面，再按一次还原桌面；
+	<include layout="@layout/titlebar" />
 
-- WIN+R：打开运行，输入命令可以执行相应操作，输入路径可以打开对应路径，输入程序名称可以打开对应程序（前提是你打开的是windows下面的程序）;输入cmd打开DOS窗口，输入notepad打开记事本，输入calc打开计算器等。
+&emsp;&emsp;比如，**include_voice_ctrl_bar_layout.xml**是一个可以提取出来的共用布局：
 
-- WIN+E：打开资源管理器；
+	<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="61dp"
+	    android:orientation="horizontal"
+	    android:layout_alignParentBottom="true">
+	    <!-- 播放、暂停 -->
+	    <Button
+	        android:id="@+id/voiceBtnId"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="100"
+	        android:background="@drawable/voice_btn_selector"
+	        android:gravity="center"
+	        android:onClick="onClick"
+	        android:text="@string/voice_stop"
+	        android:textColor="@android:color/white"
+	        android:textSize="24sp" />
+	    <!-- 分割线 -->
+	    <View
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:background="@android:color/black" />
+	    <!-- 听录音 -->
+	    <Button
+	        android:id="@+id/listenBtnId"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="100"
+	        android:background="@drawable/listen_btn_selector"
+	        android:gravity="center"
+	        android:onClick="onClick"
+	        android:text="@string/voice_listen"
+	        android:textColor="@android:color/white"
+	        android:textSize="24sp" />
+	    <!-- 分割线 -->
+	    <View
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:background="@android:color/black" />
+	    <!-- 下一个 -->
+	    <Button
+	        android:id="@+id/nextBtnId"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="100"
+	        android:background="@drawable/next_btn_selector"
+	        android:gravity="center"
+	        android:onClick="onClick"
+	        android:text="@string/voice_next"
+	        android:textColor="@android:color/white"
+	        android:textSize="24sp" />
+	</LinearLayout>
 
-- CTRL+ALT+Delete：程序不响应时用这一招结束不响应的程序，xp下用得比较多；
+&emsp;&emsp;在需要使用该共用布局的地方作如下调用即可：
+	
+	<RelativeLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@drawable/background_bottom_layer">
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_margin="10dp"
+	        android:background="@drawable/background_top_layer">
+	        <include layout="@layout/include_voice_text_bar_layout" />
+	        <include layout="@layout/include_voice_ctrl_bar_layout" />
+	    </RelativeLayout>
+	</RelativeLayout>
 
-- WIN+L：锁屏；
+## 注意事项
 
-- WIN+Tab：切换程序；
+- include和其它组件标签（RelativeLayout、LinearLayout、TextView等）一样，都可以使用layout属性来设置布局文件的宽高和位置，但需要注意的是：必须要复写android:layout_width和android:layout_height属性才能使用其它属性（比如:android:layout_grivity、android:layout_align...、android:id等），这样可以避免include引用layout中的子组件属性影响到include的布局效果：
 
-- ALT+SHIFT+TAB：切换程序；
+	
+		<RelativeLayout
+		    xmlns:android="http://schemas.android.com/apk/res/android"
+		    xmlns:tools="http://schemas.android.com/tools"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:background="@drawable/background_bottom_layer">
+		    <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_margin="10dp"
+		        android:background="@drawable/background_top_layer">
+		        <include layout="@layout/include_voice_text_bar_layout" />
+		        <include
+		            android:layout_width="match_parent"
+		            android:layout_height="61dp"
+		            android:layout_alignParentBottom="true"
+		            layout="@layout/include_voice_ctrl_bar_layout"
+		            />
+		    </RelativeLayout>
+		</RelativeLayout>
 
-- CTRL+W：关闭资源管理器；
 
-- CTRL+Home：跳转到文件最开头，直接按Home跳转到行头；
+- 建议将给<include>标签调用布局设置宽高、位置、ID等工作放在调用布局的根标签中，这样可以避免给<include>标签设置属性不当造成的各种问题（之前遇到过给include标签设置android:id属性后，程序实例化子布局中组件失败的现象）：
 
-- CTRL+End：跳转到文件尾部，直接按End跳转到行尾；
+&emsp;&emsp;应该这样：
 
+	<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/bottomBarLayoutId"
+	    android:layout_width="match_parent"
+	    android:layout_height="61dp"
+	    android:orientation="horizontal"
+	    android:layout_alignParentBottom="true">
+	    。。。
+	</LinearLayout>
+-
+	<include layout="@layout/include_voice_ctrl_bar_layout" />
 
-## 鲜为人知的技巧：
+&emsp;&emsp;而不是这样：
 
-- ALT+双击：查看文件属性；
+	<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="horizontal">
+	    。。。
+	</LinearLayout>
+-
+	<include
+		android:id="@+id/bottomBarLayoutId"
+		android:layout_width="match_parent"
+	    android:layout_height="61dp"
+		android:layout_alignParentBottom="true"
+		layout="@layout/include_voice_ctrl_bar_layout"
+		/>
+	
+## 参考资料
 
-- WIN+数字键：启动任务栏上的程序；
+- [Does Android XML Layout's 'include' Tag Really Work?](http://stackoverflow.com/questions/2631614/does-android-xml-layouts-include-tag-really-work)
 
-- 在桌面或者任何文件夹下，SHIFT+鼠标右键，可以在当前路径下打开DOS命令窗口；
-
-- 在桌面或者任何文件夹下，CTRL+鼠标左键，拖动文件、文件夹都可以立马生成文件对应的副本；
-
-- 新建只有扩展名的文件的方法：".suffix."，比如创建.gitignore，正常情况下windows是不允许创建的，但在扩展名后面加点，即.gitignore.就可以正常创建了；
-
-- CTRL+SHIFT+ESC：打开进程管理器；
-
-- WIN+左箭头：当前窗口缩放为屏幕的一半，靠屏幕左侧显示；
-
-- WIN+右箭头：当前窗口缩放为屏幕的一半，靠屏幕右侧显示；
-
-- WIN+上箭头：最大化当前窗口；
-
-- WIN+下箭头：还原和最小化当前窗口；
-
-- 在桌面上，右键任何一个程序，鼠标定位到快捷键一栏，为该应用设置启动快捷键，然后你就可以通过这个这个快捷键来启动该程序啦；
-
-- WIN+R，输入“msconfig”，弹出系统设置界面，可设置禁止、允许进程开机自启动；
-
-- WIN+R，输入“psr”后回车：打开步骤记录器；
-
-- WIN+R，输入“mip”，启动数学公式手写板；
-
-- WIN+Home：最小化所有窗口，除了当前激活窗口；
-
-- WIN+M：最小化所有窗口；
-
-- WIN+SHIFT+M：还原最小化窗口到桌面上；
-
-- WIN+P：选择一个演示文稿显示模式；
-
-- WIN+Pause：显示系统属性对话框；
-
-- WIN+F：打开windows帮助中心；
-
-- WIN+T：切换任务栏上的程序；
-
-- WIN+ALT+数字：让位于任务栏指定位置（按下的数字作为序号）的程序，显示跳转清单；
-
-## 资源管理器增强：
-
-&emsp;&emsp;windows下有很多比较好的资源管理增强工具，结合这些工具使用会大大提高你的工作效率，比如：
-
-- 资源管理标签：Clover；
-
-- 本地磁盘文件搜索：everything、百度硬盘搜索、光速搜索；
-
-- 资源管理增强：TotalCommand
-
-- 快捷键管理：AHK
-
-- 关于Windows系统中更多的高效率工具请参见：[Windows 下有什么软件能够极大地提高工作效率？](http://www.zhihu.com/question/22919326)
-
-**参考资料：**
-
-- [What are some secret tricks you should know about Windows?](http://www.quora.com/What-are-some-secret-tricks-you-should-know-about-Windows)
-
-- [Windows 有哪些你相见恨晚的奇技淫巧？](http://www.zhihu.com/question/27721113)
+- [Re-using Layouts with <include/>](http://developer.android.com/training/improving-layouts/reusing-layouts.html)
 
