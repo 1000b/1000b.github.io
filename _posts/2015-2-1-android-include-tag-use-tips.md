@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Android中<include>标签的使用及注意事项
+title: Android中include标签的使用及注意事项
 category: Android
 tags: Android
-keywords: Android,<include>
-description: Android中<include>标签的使用及注意事项
+keywords: Android,include
+description: Android中include标签的使用及注意事项
 ---
 
 ## 前言
