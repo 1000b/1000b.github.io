@@ -30,3 +30,5 @@ description: 打乱ArrayList生成一个随机序列的序列
     	
     	return randomList;
     }
+
+**PS:**经简书上一位朋友的提醒，可以通过**Collections.shuffle(List<?> list)**达到同样的效果。
