@@ -157,7 +157,3 @@ description: Android中include标签的使用及注意事项
 - [Does Android XML Layout's 'include' Tag Really Work?](http://stackoverflow.com/questions/2631614/does-android-xml-layouts-include-tag-really-work)
 
 - [Re-using Layouts with <include/>](http://developer.android.com/training/improving-layouts/reusing-layouts.html)
-	
-
-
-
