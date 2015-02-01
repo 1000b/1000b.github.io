@@ -131,7 +131,9 @@ description: Android中include标签的使用及注意事项
 	    android:layout_alignParentBottom="true">
 	    。。。
 	</LinearLayout>
+
 &emsp;&emsp;
+
 	<include layout="@layout/include_voice_ctrl_bar_layout" />
 
 &emsp;&emsp;而不是这样：
@@ -143,7 +145,9 @@ description: Android中include标签的使用及注意事项
 	    android:orientation="horizontal">
 	    。。。
 	</LinearLayout>
+
 &emsp;&emsp;
+
 	<include
 		android:id="@+id/bottomBarLayoutId"
 		android:layout_width="match_parent"
