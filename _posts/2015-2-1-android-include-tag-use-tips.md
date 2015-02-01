@@ -8,10 +8,10 @@ description: Android中include标签的使用及注意事项
 ---
 
 ## 前言
-&emsp;&emsp;<include>标签可以实现在一个layout中引用另一个layout的布局，这通常适合于界面布局复杂、不同界面有共用布局的APP中，比如一个APP的顶部布局、侧边栏布局、底部Tab栏布局、ListView和GridView每一项的布局等，将这些同一个APP中有多个界面用到的布局抽取出来再通过<include>标签引用，既可以降低layout的复杂度，又可以做到布局重用（布局有改动时只需要修改一个地方就可以了）。
+&emsp;&emsp;**include**标签可以实现在一个layout中引用另一个layout的布局，这通常适合于界面布局复杂、不同界面有共用布局的APP中，比如一个APP的顶部布局、侧边栏布局、底部Tab栏布局、ListView和GridView每一项的布局等，将这些同一个APP中有多个界面用到的布局抽取出来再通过**include**标签引用，既可以降低layout的复杂度，又可以做到布局重用（布局有改动时只需要修改一个地方就可以了）。
 
 ## 使用方法
-&emsp;&emsp;<include>标签的使用很简单，只需要在布局文件中需要引用其它布局的地方，使用**layout="@layout/child_layout"**就可以了：
+&emsp;&emsp;**include**标签的使用很简单，只需要在布局文件中需要引用其它布局的地方，使用**layout="@layout/child_layout"**就可以了：
 
 	<include layout="@layout/titlebar" />
 
@@ -93,7 +93,7 @@ description: Android中include标签的使用及注意事项
 
 ## 注意事项
 
-- include和其它组件标签（RelativeLayout、LinearLayout、TextView等）一样，都可以使用layout属性来设置布局文件的宽高和位置，但需要注意的是：必须要复写android:layout_width和android:layout_height属性才能使用其它属性（比如:android:layout_grivity、android:layout_align...、android:id等），这样可以避免include引用layout中的子组件属性影响到include的布局效果：
+- **include**和其它组件标签（RelativeLayout、LinearLayout、TextView等）一样，都可以使用layout属性来设置布局文件的宽高和位置，但需要注意的是：必须要复写**android:layout_width**和**android:layout_height**属性才能使用其它属性（比如:android:layout_grivity、android:layout_align...、android:id等），这样可以避免**include**引用layout中的子组件属性影响到**include**的布局效果：
 
 	
 		<RelativeLayout
@@ -118,7 +118,7 @@ description: Android中include标签的使用及注意事项
 		</RelativeLayout>
 
 
-- 建议将给<include>标签调用布局设置宽高、位置、ID等工作放在调用布局的根标签中，这样可以避免给<include>标签设置属性不当造成的各种问题（之前遇到过给include标签设置android:id属性后，程序实例化子布局中组件失败的现象）：
+- 建议将给**include**标签调用布局设置宽高、位置、ID等工作放在调用布局的根标签中，这样可以避免给**include**标签设置属性不当造成的各种问题（之前遇到过给**include**标签设置**android:id**属性后，程序实例化子布局中组件失败的现象）：
 
 &emsp;&emsp;应该这样：
 
