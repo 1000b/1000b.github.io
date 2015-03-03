@@ -16,77 +16,77 @@ description:  通过观察者模式监听媒体库的变化实现APP本地数据
 
 - **媒体库是什么？：**在Android系统中，为了提高应用检索数据的效率，Android会将存储在文件系统中的文件信息保存在一个数据库文件中，这样在应用中就可以通过读取该数据库来快速查找满足APP需求的文件列表，比如一个电子书阅读APP，通过如下方法就可以获取到媒体库中存在的电子书文件列表，保存哪些格式的文件是可以通过修改Android原来来调整的，不过对于多媒体文件来说，Android原生系统默认就保存在媒体库中了：
 	
-	/**
-	 * 从媒体库中获取指定后缀的文件列表
-	 * 
-	 * @param searchFileSuffix 文件后缀列表，eg: new String[]{"epub","mobi","pdf","txt"};
-	 * @return 指定后缀的文件列表
-	 * */
-	public static ArrayList<String> getSupportFileList(Context context, String[] searchFileSuffix) {
-		ArrayList<String> searchFileList = null;
-		if (null == context || null == searchFileSuffix
-				|| searchFileSuffix.length == 0) {
-			return null;
-		}
-
-		String searchPath = "";
-		int length = searchFileSuffix.length;
-		for (int index = 0; index < length; index++) {
-			searchPath += (MediaStore.Files.FileColumns.DATA + " LIKE '%" + searchFileSuffix[index] + "' ");
-			if ((index + 1) < length) {
-				searchPath += "or ";
+		/**
+		 * 从媒体库中获取指定后缀的文件列表
+		 * 
+		 * @param searchFileSuffix 文件后缀列表，eg: new String[]{"epub","mobi","pdf","txt"};
+		 * @return 指定后缀的文件列表
+		 * */
+		public static ArrayList<String> getSupportFileList(Context context, String[] searchFileSuffix) {
+			ArrayList<String> searchFileList = null;
+			if (null == context || null == searchFileSuffix
+					|| searchFileSuffix.length == 0) {
+				return null;
 			}
-		}
-		searchFileList = new ArrayList<String>();
-		Uri uri = MediaStore.Files.getContentUri("external");
-		Cursor cursor = context.getContentResolver().query(
-				uri,new String[] { MediaStore.Files.FileColumns.DATA,MediaStore.Files.FileColumns.SIZE }, searchPath, null,null);
-
-		if (cursor == null) {
-			System.out.println("Cursor 获取失败!");
-		} else {
-			if (cursor.moveToFirst()) {
-				do {
-					String filepath = cursor.getString(cursor.getColumnIndex(MediaStore.Files.FileColumns.DATA));
-					if (isFileExist(filepath)) {
-						try {
-							searchFileList.add(new String(filepath.getBytes("UTF-8")));
-						} catch (UnsupportedEncodingException e) {
-							e.printStackTrace();
-						}
-					}
-
-				} while (cursor.moveToNext());
-			}
-
-			if (!cursor.isClosed()) {
-				cursor.close();
-			}
-		}
-
-		return searchFileList;
-	}
 	
-	/**
-	 * 判断SD卡上的文件夹是否存在
-	 * 
-	 * @param fileName 文件名
-	 * @return true 文件存在，false 文件不存在
-	 */
-	private static boolean isFileExist(String filePath) {
-		File file = null;
-		boolean isExist = false;
-
-		if (null != filePath) {
-			file = new File(filePath);
-			isExist = (null != file && file.isFile()) ? file.exists() : false;
-			if (isExist && null != file && 0 == file.length()) {
-				isExist = false;
+			String searchPath = "";
+			int length = searchFileSuffix.length;
+			for (int index = 0; index < length; index++) {
+				searchPath += (MediaStore.Files.FileColumns.DATA + " LIKE '%" + searchFileSuffix[index] + "' ");
+				if ((index + 1) < length) {
+					searchPath += "or ";
+				}
 			}
+			searchFileList = new ArrayList<String>();
+			Uri uri = MediaStore.Files.getContentUri("external");
+			Cursor cursor = context.getContentResolver().query(
+					uri,new String[] { MediaStore.Files.FileColumns.DATA,MediaStore.Files.FileColumns.SIZE }, searchPath, null,null);
+	
+			if (cursor == null) {
+				System.out.println("Cursor 获取失败!");
+			} else {
+				if (cursor.moveToFirst()) {
+					do {
+						String filepath = cursor.getString(cursor.getColumnIndex(MediaStore.Files.FileColumns.DATA));
+						if (isFileExist(filepath)) {
+							try {
+								searchFileList.add(new String(filepath.getBytes("UTF-8")));
+							} catch (UnsupportedEncodingException e) {
+								e.printStackTrace();
+							}
+						}
+	
+					} while (cursor.moveToNext());
+				}
+	
+				if (!cursor.isClosed()) {
+					cursor.close();
+				}
+			}
+	
+			return searchFileList;
 		}
-
-		return isExist;
-	}
+		
+		/**
+		 * 判断SD卡上的文件夹是否存在
+		 * 
+		 * @param fileName 文件名
+		 * @return true 文件存在，false 文件不存在
+		 */
+		private static boolean isFileExist(String filePath) {
+			File file = null;
+			boolean isExist = false;
+	
+			if (null != filePath) {
+				file = new File(filePath);
+				isExist = (null != file && file.isFile()) ? file.exists() : false;
+				if (isExist && null != file && 0 == file.length()) {
+					isExist = false;
+				}
+			}
+	
+			return isExist;
+		}
 
 - **媒体库更新时机：**Android系统会在系统开机、USB插拔、TF卡插拔的时候自动更新媒体库（将新增的文件添加到媒体库中，移除不存在的文件数据记录），除了Android系统会自动更新媒体库文件外，开发者也可以在程序中手动更新媒体库，这样能够在文件系统中有新的文件或者通过程序删掉某些文件时能够将动态及时更新到媒体库，保证媒体库中的文件信息是实时的，更新的具体方式如下：
 
