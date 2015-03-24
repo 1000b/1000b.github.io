@@ -52,7 +52,3 @@ description: Android清除数据、清除缓存、一键清理的区别
 - getExternalCacheDir()(是否能够在程序被卸载时被删除与API的等级有关)
 
 - getExternalFilesDir()(是否能够在程序被卸载时被删除与API的等级有关)
-
-
-
-
