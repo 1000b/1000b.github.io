@@ -70,9 +70,31 @@ description: Android开发者网址导航，分为官网、资源、开源导航
 
 - [droidyue](http://droidyue.com)
 
+- [Trinea](http://www.trinea.cn/)
+
+- [stormzhang](http://www.stormzhang.com/)
+
+- [代码家](http://blog.daimajia.com/)
+
 - [脉脉不得语的技术博客](http://www.inferjay.com/)
 
 - [Android Cool Posts](http://greenrobot.me/)
+
+- [hongyang](http://blog.csdn.net/lmj623565791)
+
+- [Mr.Simple](http://blog.csdn.net/bboyfeiyu)
+
+- [zmywly8866](http://zmywly8866.github.io/)
+
+- [codekk](http://www.codekk.com/open-source-project-analysis)
+
+- [伯乐在线Android栏目](http://android.jobbole.com/)
+
+- [Android开发技术周报](http://www.androidweekly.cn/)
+
+- [Cyril Mottier](http://cyrilmottier.com/)
+
+- [技术小黑屋](http://droidyue.com/)
 
 
 **学习导航**
@@ -89,6 +111,10 @@ description: Android开发者网址导航，分为官网、资源、开源导航
 
 - [牛客网](http://www.nowcoder.com)
 
+- [noexcuselist](http://noexcuselist.com/)
+
+- [tutorialspoint](http://www.tutorialspoint.com/)
+
 - [Android学习之路](http://stormzhang.com/android/2020/07/07/learn-android-from-rookie/)
 
 - [如何自学android编程？](http://www.zhihu.com/question/26417244)
@@ -99,9 +125,9 @@ description: Android开发者网址导航，分为官网、资源、开源导航
 
 **APP**
 
-- [DevAppsDirect](https://play.google.com/store/apps/details?id=com.inappsquared.devappsdirect&amp;hl=zh_CN)
+- [DevAppsDirect](https://play.google.com/store/apps/details?id=com.inappsquared.devappsdirect&hl=zh_CN)
 
-- [Libraries for developers](https://play.google.com/store/apps/details?id=com.desarrollodroide.repos&amp;hl=zh_CN)
+- [Libraries for developers](https://play.google.com/store/apps/details?id=com.desarrollodroide.repos&hl=zh_CN)
 
 - [23Code](https://play.google.com/store/apps/details?id=com.ttcode.appdirect)
 
@@ -117,6 +143,8 @@ description: Android开发者网址导航，分为官网、资源、开源导航
 
 - [Android jobs](https://github.com/android-cn/android-jobs)
 
+- [skillgun](http://skillgun.com/)
+
 **其它**
 
 - [AppBrain](http://www.appbrain.com)
@@ -129,6 +157,10 @@ description: Android开发者网址导航，分为官网、资源、开源导航
 
 - [NewCircle Training](https://www.youtube.com/user/MarakanaTechTV)
 
-**QQ群**
+- [Android-Develop-Resources](https://github.com/zmywly8866/Android-Develop-Resources)
 
-- 243182658
+- [Worth-Reading-the-Android-technical-articles](https://github.com/zmywly8866/Worth-Reading-the-Android-technical-articles)
+
+- [单元测试robotium](http://www.robotium.cn/)
+
+- [代码质量管理sonar](http://sonar.oschina.net/)
