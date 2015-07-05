@@ -229,6 +229,7 @@ description: Android APP内存优化之图片优化
 ### 没有必要使用硬件加速的界面建议关掉硬件加速
 
 &emsp;&emsp;通过DDMS的heap跟踪发现，相比于关闭硬件加速，在打开硬件加速的情况下会消耗更多的内存，但有的界面打开或者关闭硬件加速对程序的运行效率并没有太大的影响，此种情况下可以考虑在AndroidManifest.xml文件中关闭掉对应Activity的硬件加速，like this：
+
 	<!-- 设置界面 -->
     <activity
         android:name=".SettingActivity"
@@ -396,7 +397,7 @@ description: Android APP内存优化之图片优化
 
 - 不要在Activity的主题中为Activity设置默认的背景图片，这样会导致Activity占用的内存翻倍：
 
-	<!--千万不要在主题中为Activity设置默认背景
+	<!--千万不要在主题中为Activity设置默认背景 -->
 	<style name="Activity_Style" parent="@android:Theme.Holo.Light.NoActionBar">
         <item name="android:background">@drawable/***</item>
     </style>
