@@ -17,9 +17,7 @@ adb shell am start -W packagename/activity，eg：adb shell am start -W com.tenc
 
 ### 实时显示程序的内存消耗
 
-- 讯飞Android应用性能测试工具：[iTest]
-
-- (http://itest.iflytesting.com/?p=1)
+- 讯飞Android应用性能测试工具：[iTest](http://itest.iflytesting.com/?p=1)
 
 - Android Studio—>Android Monitor—>Memory/CPU|GPU通过观测程序运行过程中的内存状态可以粗略地检测到哪些界面存在内存泄漏、哪些地方存在内存抖动（内存抖动时可能触发GC，导致程序出现卡顿的现象）、优化效果等。
 
