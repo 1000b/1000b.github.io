@@ -1,4 +1,4 @@
-ja---
+---
 layout: post
 title: 使用软引用解决Handler内存泄露和显示Popupwindow、Dialog时提示"Unable to add Window-token is null"的问题
 category: Android
