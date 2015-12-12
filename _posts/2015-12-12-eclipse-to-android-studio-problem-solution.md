@@ -164,7 +164,10 @@ description: Eclipse转Android Studio的过程中有必要弄明白的一些问�
 
 ### 15、导入Google官方的Sample不成功，如何处理？
 
-**答：**Android Studio 导入 Google Sample 时，需要联网获取，由于某些原因，连接不了服务器。参考网上的方案，给出一种更为简便、快速的方法：在 host 文件中加入一句： 64.233.162.84 gsamplesindex.appspot.com 
+**答：**Android Studio 导入 Google Sample 时，需要联网获取，由于某些原因，连接不了服务器。参考网上的方案，给出一种更为简便、快速的方法：在 host 文件中加入一句： 
+
+		64.233.162.84 gsamplesindex.appspot.com 
+
 如果 ip 失效了，找个有用的替换即可（win7的host文件在：C:\Windows\system32\drivers\etc 目录下）。
 
 ### 16、问：如何在构建时删掉build\output目录下的unsigned-align.apk？
