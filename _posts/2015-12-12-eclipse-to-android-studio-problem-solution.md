@@ -11,7 +11,7 @@ description: Eclipse转Android Studio的过程中有必要弄明白的一些问�
 
 &emsp;&emsp;下面将自己在Eclipse转AS过程中遇到的一些问题以及对各个问题的理解列出来，方便后续查阅。
 
-### 问：Eclipse的工程如何导入到AS？
+### 1、问：Eclipse的工程如何导入到AS？
 
 **答：**我的处理方式是在AS中新建工程，然后将Eclipse中对应工程的文件拷贝过来；当然也可以通过Eclipse将project导成gradle版本的，然后在AS中导入该工程。
 
@@ -73,26 +73,26 @@ description: Eclipse转Android Studio的过程中有必要弄明白的一些问�
 
 - 引用libs文件夹中的so，需要在对应module下的build.gradle文件的android标签下加上如下属性： 
  
-	android {
-	  sourceSets {
-	      main {
-	          jniLibs.srcDirs = ['libs']
-	      }
-	  }
-	}
+		android {
+		  sourceSets {
+		      main {
+		          jniLibs.srcDirs = ['libs']
+		      }
+		  }
+		}
 
 - android studio的编译时屏蔽掉lint检查，可以避免由于编译条件太过严格而编译不过的问题： 
  
-	lintOptions {
-	  abortOnError false
-	}
+		lintOptions {
+		  abortOnError false
+		}
 
 - 如果遇到多个jar包中的某个文件冲突，可以在对应module下的build.gradle文件的android标签下加上如下属性：  
 
-	packagingOptions {
-	  exclude 'META-INF/NOTICE.txt'// 这里是具体的冲突文件全路径
-	  exclude 'META-INF/LICENSE.txt'
-	}
+		packagingOptions {
+		  exclude 'META-INF/NOTICE.txt'// 这里是具体的冲突文件全路径
+		  exclude 'META-INF/LICENSE.txt'
+		}
 
 - 调整logcat文件显示的颜色：File→Setting→Editor→Colors&Fonts→Android Logcat→在界面的右侧调节logcat每个级别日志的颜色；
 
@@ -126,15 +126,15 @@ description: Eclipse转Android Studio的过程中有必要弄明白的一些问�
 
 - 导入aar：将aar拷贝到libs文件夹，在module的build.gradle文件增加下面这段话：
 
-	repositories {
-		flatDir() {
-		    dirs 'libs'
+		repositories {
+			flatDir() {
+			    dirs 'libs'
+			}
 		}
-	}
 
 然后在build.gradle的dependencies标签中按照如下格式引用aar文件即可：
 
-	compile(name:'aar包名不带扩展名', ext:'aar')
+		compile(name:'aar包名不带扩展名', ext:'aar')
 
 ### 12、问：AS相比于Eclipse，有哪些新的工具或者更方便的功能？
 
