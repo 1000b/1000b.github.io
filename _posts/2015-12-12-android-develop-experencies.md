@@ -15,7 +15,7 @@ description: Android开发经验总结
 
 - 有些时候不能使用Application的Context，不然会报错（比如启动Activity，显示Dialog等）：
 
-![](https://pic3.zhimg.com/e3f3236cbd96c69cdea10d014bacbeae_b.png)
+![](http://ww4.sinaimg.cn/large/6d17e381gw1eywnfqyrzbj20go087wh4.jpg)
 
 
 - 同一个应用的JNI代码，不要轻易换NDK编译的版本，否则会有很多问题（主要是一些方法实现不一样，并且高版本对代码的检测更严格），比如r8没有问题，但到r9就有问题了，这是个大坑；
