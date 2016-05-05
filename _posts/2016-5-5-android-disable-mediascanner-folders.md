@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Android通过.nomedia文件禁止多媒体库扫描指定的文件夹下的多媒体文件
+title: Android通过.nomedia文件禁止多媒体库扫描指定文件夹下的多媒体文件
 category: Android
 tags: Android
 keywords: Android,MediaStore,nomedia,媒体库
-description: Android通过.nomedia文件禁止多媒体库扫描指定的文件夹下的多媒体文件
+description: Android通过.nomedia文件禁止多媒体库扫描指定文件夹下的多媒体文件
 
 ---
 
