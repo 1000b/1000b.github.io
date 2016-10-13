@@ -7,16 +7,14 @@ kramdown:
 
 # 作者信息
 author: 
-  name: 张明云
-  email: zmywly8866@gmail.com
-  link: http://blog.csdn.net/ekeuy
-  weibo: http://weibo.com/zmywly8866
-  github: https://github.com/zmywly8866
+  name: 8bit
+  email: cdb1t1000@gmail.com
+  github: https://github.com/1000b/
 
 # 站点信息
-title: 张明云的博客 
-description: 张明云的博客
-url: http://zmywly8866.github.io
+title: 8bit 
+description: 
+url: http://1000b.github.io
 rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
@@ -26,7 +24,7 @@ favicon: http://img.my.csdn.net/uploads/201411/21/1416528891_9081.png
 # google analytics 设置
 ga:
   id: UA-56952211-1
-  url: zmywly8866.github.io
+  url: 10000.github.io
 
 # disqus 设置
 disqus:
