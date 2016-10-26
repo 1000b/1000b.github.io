@@ -50,7 +50,7 @@ _main ENDP
 
 > 这里要注意的是主程序和调用printf函数。
 
-![图１](img/2016/windows/1.png)
+![图１](http://ofn62lbqx.bkt.clouddn.com/1.png)
 
 
 这段代码就是由机器代码编写的，可以在调试器中看到高亮显示了
